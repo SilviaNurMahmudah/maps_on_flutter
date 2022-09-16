@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   late GoogleMapController mapController;
   final LatLng _center = const LatLng(45.521563, -122.677433);
-  final Location _location = Location();
+  // final Location _location = Location();
   Map<MarkerId, Marker> markers = <MarkerId, Marker>{};
 
   void _onMapCreated(GoogleMapController controller) {
@@ -62,7 +62,6 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Color.fromARGB(255, 122, 183, 243),
         ),
         body: GoogleMap(
-          mapType: MapType.hybrid,
           onMapCreated: _onMapCreated,
           initialCameraPosition: CameraPosition(
             target: _center,
